@@ -15,6 +15,7 @@ spellObject.onMagicCastingCheck = function(caster, target, spell)
 end
 
 spellObject.onSpellCast = function(caster, target, spell)
+    spell:setMsg(xi.msg.basic.AOE_HP_RECOVERY)
     return xi.spells.healing.doHealingSpell(caster, target, spell, true)
 end
 
